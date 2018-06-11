@@ -26,6 +26,6 @@ info = re.findall(('<div class="lessonimg-box">.*?<a href=.*?<img src="(.*?)" cl
 for each in info:
     print 'now loading' + each[1]
     pic = req.get(each[0])
-    fp = open(unicode('pic\\' + each[1] + '.jpg','utf-8'),'wb')
+    fp = open(unicode('material\\pic\\' + each[1] + '.jpg','utf-8'),'wb')
     fp.write(pic.content)
     fp.close()
